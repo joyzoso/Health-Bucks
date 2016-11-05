@@ -99,7 +99,7 @@ mineCraftRoute.put("/time", function(req, res) {
     bucksData.minecraftTime.available += 1;
   }
   writeFile("health-bucks.json", JSON.stringify(bucksData));
-  res.status(200).json({"time": bucksData.minecraftTime.available})
+  res.status(200).send(JSON.stringify(bucksData.minecraftTime.available))
 })
 
 mineCraftRoute.get("/user", function(req, res) {
