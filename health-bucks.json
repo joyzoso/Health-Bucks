@@ -5,19 +5,5 @@
     {
       "available":120,
       "total":120
-    },
-  "chores": [{
-
-    }]
+    }
 }
-
-{"chore": "cat", "max": 0, "current": 0}
-{"chore": "bath", "max": 0, "current": 0}
-{"chore": "laundry", "max": 0, "current": 0}
-{"chore": "car", "max": 0, "current": 0}
-{"chore": "dog", "max": 0, "current": 0}
-{"chore": "teeth", "max": 0, "current": 0}
-{"chore": "exercise", "max": 0, "current": 0}
-{"chore": "homework", "max": 0, "current": 0}
-{"chore": "veg", "max": 0, "current": 0}
-{"chore": "name", "max": 0, "current": 0}
