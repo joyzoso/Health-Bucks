@@ -3,7 +3,10 @@ var app = express();
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser());
+
+// Global store of our app's data
+var bucksData;
 
 // Asynchronously read file contents, then call callbackFn
 function readFile(filename, defaultData, callbackFn) {
@@ -30,11 +33,33 @@ function writeFile(filename, data, callbackFn) {
   });
 }
 
+// get credit
+app.get("/credit", function(request, response){
+  response.status(200).send({
+    credit: bucksData.credit
+  });
+});
+
+// update credit
+app.put("/credit", function(request, response) {
+  console.log(request.body);
+
+  if(request.body.add) {
+    bucksData.credit = bucksData.credit + 20;
+  } else if(request.body.checkoutCredit) {
+    bucksData.credit = bucksData.credit - request.body.checkoutCredit;
+  }
+
+  writeFile("health-bucks.json", JSON.stringify(bucksData));
+
+  response.status(200).send();
+});
+
 function initServer() {
   // When we start the server, we must load the stored data
-  var defaultList = "[]";
-  readFile("data.txt", defaultList, function(err, data) {
-    listings = JSON.parse(data);
+  var defaultList = {};
+  readFile("health-bucks.json", defaultList, function(err, data) {
+    bucksData = JSON.parse(data);
   });
 }
 
