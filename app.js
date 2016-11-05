@@ -5,6 +5,7 @@ var fs = require('fs');
 var mineCraftRoute = express.Router();
 var parser = require('body-parser');
 
+app.use('/', express.static('public'));
 
 // Daniel Uses This Body Parser
 app.use(parser.json());
