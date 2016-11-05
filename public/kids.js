@@ -11,7 +11,6 @@ var mcBuyTime = function() {
   if (user.credit >= 1) {
     user.credit -= 1;
     document.getElementById("earned").innerHTML = user.credit
-    document.getElementById("total").innerHTML = user.minecraftTime.available;
     saveUser({'checkoutCredit': 1})
   }
 }
@@ -29,7 +28,6 @@ $(document).ready(function() {
       user = res.user;
       document.getElementById("earned").innerHTML = res.user.credit;
 
-      document.getElementById("total").innerHTML = res.user.minecraftTime.available;
     }
   })
 
