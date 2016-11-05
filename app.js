@@ -83,7 +83,7 @@ mineCraftRoute.get("/time", function(req, res) {
     }
     else {
       bucksData = JSON.parse(data);
-      res.status(200).json({"time": bucksData.minecraftTime.available})
+      res.status(200).send(JSON.stringify(bucksData.minecraftTime.available))
     }
   })
 })
