@@ -56,7 +56,7 @@ app.put("/credit", function(request, response) {
 
   writeFile("health-bucks.json", JSON.stringify(bucksData));
 
-  return response.status(200).send();
+  return response.status(200).send({credit: bucksData.credit});
 });
 
 function initServer() {
