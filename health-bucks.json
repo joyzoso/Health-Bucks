@@ -1,9 +1,1 @@
-{
-  "parent":"Catelyn Stark",
-  "username":"Arya Stark",
-  "credit":100,
-  "minecraftTime": {
-    "available":120,
-    "total":120
-  }
-}
+{"parent":"Catelyn Stark","username":"Arya Stark","credit":160,"minecraftTime":{"available":120,"total":120}}

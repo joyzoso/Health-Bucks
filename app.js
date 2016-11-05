@@ -2,7 +2,13 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var mineCraftRoute = express.Router();
+var parser = require('body-parser');
 
+
+// Daniel Uses This Body Parser
+app.use(parser.json());
+// Kim Uses This Body Parser
 app.use(bodyParser());
 
 // Global store of our app's data
@@ -36,7 +42,8 @@ function writeFile(filename, data, callbackFn) {
 // get credit
 app.get("/credit", function(request, response){
   response.status(200).send({
-    credit: bucksData.credit
+    credit: bucksData.credit,
+    "user": bucksData
   });
 });
 
@@ -62,6 +69,36 @@ function initServer() {
     bucksData = JSON.parse(data);
   });
 }
+
+// Route for MineCraft Time
+mineCraftRoute.get("/time", function(req, res) {
+  readFile('health-bucks.json', req, function(err, data) {
+    if (err) {
+      console.log("Recheck Request Please")
+      res.status(401).json({"message": "Recheck Request Please"})
+    }
+    else {
+      bucksData = JSON.parse(data);
+      res.status(200).json({"time": bucksData.minecraftTime.available})
+    }
+  })
+})
+//Route For Availabe Time (SUBTRACT and ADDITION)
+mineCraftRoute.put("/time", function(req, res) {
+  var id = req.params._id;
+  var user = req.body;
+  if (req.body.remove == true) {
+    bucksData.minecraftTime.available -= 1;
+  }
+  else if (req.body.add == true) {
+    bucksData.minecraftTime.available += 1;
+  }
+  writeFile("health-bucks.json", JSON.stringify(bucksData));
+  res.status(200).json({"time": bucksData.minecraftTime.available})
+})
+
+// Mine Craft Route to Call
+app.use('/api/mc', mineCraftRoute);
 
 // Finally, initialize the server on any port, and go to that url
 // in your browser
