@@ -8,7 +8,7 @@ body {
 background: #bdc3c7; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+
 }
 
 
@@ -56,6 +56,30 @@ h4 {
 .login a {
 	color: black;
 }
+
+
+
+#earned {
+	border-radius: 50%;
+	background-color: gold;
+	color: black;
+	width: 6em;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: block;
+position: relative;
+font-size: 2em;
+}
+
+
+.helpme {
+	margin: auto;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
 /*.text-center {
 	color: black;
 	display: block;
@@ -69,4 +93,3 @@ margin: auto;
 /*make it pretty*/
 /*background: gold;
 color: #fff;*/
-

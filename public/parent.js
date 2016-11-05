@@ -16,6 +16,7 @@ function getCredit() {
     success: function(data) {
       console.log('got credits!');
       credit = data.credit;
+      document.getElementById("earned").innerHTML = credit;
     }
  });
 }
