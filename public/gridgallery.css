@@ -2,6 +2,13 @@
 
 body {
 	padding-top: 70px;
+
+
+
+background: #bdc3c7; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 }
 
 
@@ -9,6 +16,7 @@ body {
 	color: #2c3e50;
 	background: #ecf0f1;
 	text-align: center;
+
 }
 
 .navbar-inverse {
@@ -44,3 +52,21 @@ h4 {
 .row {
 	text-align: center;
 }
+
+.login a {
+	color: black;
+}
+/*.text-center {
+	color: black;
+	display: block;
+	height: 100px; /*change this and the width
+for the size of your initial circle*/
+/*width: 100px;
+text-align: center;
+vertical-align: middle;
+border-radius: 50%;
+margin: auto;
+/*make it pretty*/
+/*background: gold;
+color: #fff;*/
+
