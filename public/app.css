@@ -1,0 +1,93 @@
+/*for landing page*/
+
+body {
+	/*background-image: url(https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0c98225393f792b7b58e4fe2d3fe1644);*/
+	background-size: cover;
+	background-position: center;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	
+
+background: #bdc3c7; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+html {
+	height: 100%;
+}
+
+#content {
+	text-align: center;
+	padding-top: 15%;
+	/*rgba setting different shades of gray*/
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 10em
+	text-align: center;
+}
+
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+
+/*for kids.html*/
+
+body {
+	padding-top: 70px;
+}
+
+
+.jumbotron{
+	color: #2c3e50;
+	background: #ecf0f1;
+	text-align: center;
+	margin: 10%;
+}
+
+.navbar-inverse {
+	background-color: #2c3e50;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.login {
+	text-align: center;
+}
+
+img {
+	width: 25%;
+	background: transparent;
+
+}
+
+h4 {
+	text-align: center;
+}
+
+.thumbnail {
+	text-align: center;
+}
+
+.row {
+	text-align: center;
+}
+
+.login a {
+	color: black;
+}
