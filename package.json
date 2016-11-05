@@ -1,0 +1,23 @@
+{
+  "name": "silicon_cheetahs",
+  "version": "1.0.0",
+  "description": "wecode hackathon",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimdangg/silicon_cheetahs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimdangg/silicon_cheetahs/issues"
+  },
+  "homepage": "https://github.com/kimdangg/silicon_cheetahs#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
