@@ -47,12 +47,16 @@ app.put("/credit", function(request, response) {
   if(request.body.add) {
     bucksData.credit = bucksData.credit + 20;
   } else if(request.body.checkoutCredit) {
+    var tempCredit = bucksData.credit;
+    if(tempCredit - request.body.checkoutCredit < 0) {
+      return response.status(200).send({error: "Sorry, you don't have enought credit to get this."});
+    }
     bucksData.credit = bucksData.credit - request.body.checkoutCredit;
   }
 
   writeFile("health-bucks.json", JSON.stringify(bucksData));
 
-  response.status(200).send();
+  return response.status(200).send();
 });
 
 function initServer() {
