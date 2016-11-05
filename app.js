@@ -102,6 +102,20 @@ mineCraftRoute.put("/time", function(req, res) {
   res.status(200).json({"time": bucksData.minecraftTime.available})
 })
 
+mineCraftRoute.get("/user", function(req, res) {
+  readFile('health-bucks.json', req, function(err, data) {
+    if (err) {
+      console.log("Recheck Request Please")
+      res.status(401).json({"message": "Recheck Request Please"})
+    }
+    else {
+      bucksData = JSON.parse(data);
+      res.status(200).send(JSON.stringify(bucksData))
+    }
+  })
+})
+
+
 // Mine Craft Route to Call
 app.use('/api/mc', mineCraftRoute);
 
