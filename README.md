@@ -1,5 +1,5 @@
-# HealthBucks
-wecode hackathon
+# Health Bucks
+###wecode2016 hackathon
 Team 12: silicon_cheetahs
 
 ## Objective
@@ -9,9 +9,10 @@ Health Bucks is a web application that helps parents encourage healthy behavior 
 Clone the HealthBucks App
 
 Using npm:
+```
 $ npm install
 $ npm start
-
+```
 Install mods for Minecraft Forge
 
 Install the HealthBucks.jar
@@ -21,9 +22,9 @@ Open a web browser and go to the below url:
 http://localhost:8889
 
 Credits and acknowledgements:
-Megan Alnico
-Kim Dang
-Daniel Cudney
-Joy Earl
-Jahnel Lybean
-Yash Kaur
++ Megan Alnico
++ Kim Dang
++ Daniel Cudney
++ Joy Earl
++ Jahnel Lybean
++ Yash Kaur
