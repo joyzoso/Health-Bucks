@@ -122,4 +122,4 @@ app.use('/api/mc', mineCraftRoute);
 // Finally, initialize the server on any port, and go to that url
 // in your browser
 initServer();
-app.listen(8889);
+app.listen(process.env.PORT || 8889);
